@@ -1,20 +1,20 @@
 [
   {
-   "title": "project title",
-        "folder": "name of the folder",
-        "author": "my name",
-        "year": "folder name of the year",
-        "info": "info about your project",
-        "status": "0"
+    "title": "Doodle Jump Clone",
+    "folder": "BuildDoodle",
+    "author": "Matthias Kogler",
+    "year": "2022_WS",
+    "info": "Doodle Clone that makes fun to play",
+    "status": "0"
   },
   {
     "title": "Spedrun",
-         "folder": "ChenK",
-         "author": "Kevin Chen",
-         "year": "2022",
-         "info": "",
-         "status": "0"
-   },
+    "folder": "ChenK",
+    "author": "Kevin Chen",
+    "year": "2022_WS",
+    "info": "",
+    "status": "0"
+  },
   {
     "title": "Volleyball Rotation Simulator",
     "folder": "VBRotationsWebGL",
@@ -24,12 +24,35 @@
     "status": "0"
   },
   {
-    "title": "Ruby's Adventure Game Solution",
-    "folder": "GolubP",
-    "author": "Petar Golub",
+    "title": "Hoops",
+    "folder": "WebGLHoops",
+    "author": "David Kogler",
     "year": "2022_WS",
+    "info": "my project should work",
+    "status": "1"
+  },
+  {
+    "title": "Slot machine",
+    "folder": "Build_Slot_machine_14.02.2023",
+    "author": "Jonas Voitl",
+    "year": "2022_WS",
+    "info": "This is an unfinished version of the game. More features are added in the future.",
+    "status": "0"
+  },
+  {
+    "title": "Super Max Bros",
+    "folder": "empty",
+    "author": "Emil Kinzl",
+    "year": "2022",
     "info": "-",
     "status": "0"
+  },
+  {
+    "title": "Ruby's Adventure Game",
+    "folder": "GolubP",
+    "author": "Golub Petar",
+    "year": "2022_WS",
+    "info": "full solution",
+    "status":  0
   }
- 
 ]
