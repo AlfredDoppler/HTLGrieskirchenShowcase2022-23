@@ -61,5 +61,13 @@
         "year": "2022_WS",
         "info": "Long not finished - some bugs still exist and might be fixed in the future",
         "status": "0"
-  }
+  },
+  {
+      "title": "Fight_Simulator",
+           "folder": "Fight_Simulator",
+           "author": "Michael Daurer",
+           "year": "2022_WS",
+           "info": "Wird noch fertiggestellt - Wartezeit wegen Animaionen",
+           "status": "0"
+     }
 ]
