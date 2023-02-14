@@ -16,12 +16,20 @@
          "status": "0"
    },
   {
-   "title": "Volleyball Rotation Simulator",
-        "folder": "VBRotationsWebGL",
-        "author": "Jakob Gschwendtner",
-        "year": "2022_WS",
-        "info": "-",
-        "status": "0"
+    "title": "Volleyball Rotation Simulator",
+    "folder": "VBRotationsWebGL",
+    "author": "Jakob Gschwendtner",
+    "year": "2022_WS",
+    "info": "-",
+    "status": "0"
+  },
+  {
+    "title": "Ruby's Adventure Game Solution",
+    "folder": "GolubP",
+    "author": "Petar Golub",
+    "year": "2022_WS",
+    "info": "-",
+    "status": "0"
   }
  
 ]
