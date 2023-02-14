@@ -39,4 +39,12 @@
         "info": "This is an unfinished version of the game. More features are added in the future.",
         "status": "0"
   }
+  ,{
+   "title": "Baba Yaga",
+        "folder": "YilmazK",
+        "author": "Kaan Yilmaz",
+        "year": "2022_WS",
+        "info": "Finished game",
+        "status": "0"
+  }
 ]
