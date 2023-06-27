@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Upgraded Cookie Clicker</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #FF0000;
+    }
+
+    .cookie-image {
+      width: 200px;
+      height: auto;
+      margin: 50px auto;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #btnbtn {
+      width: calc(20vw + 6px);
+      height: calc(8vw + 6px);
+      background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 3vw;
+      font-weight: bold;
+    }
+
+    #btnbtn:after {
+      content: attr(alt);
+      width: 20vw;
+      height: 8vw;
+      background-color: #191919;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #btnbtn:hover {
+      animation: slidebg 2s linear infinite;
+    }
+
+    @keyframes slidebg {
+      to {
+        background-position: 20vw;
+      }
+    }
+
+    .cookie-image.click-effect {
+      transform: scale(1.1);
+    }
+
+    .score {
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .centured {
+      display:flex;
+      justify-content: center;
+    }
+
+    .upgrades {
+      margin-bottom: 20px;
+    }
+
+    .upgrade-button {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .upgrade-button:hover {
+      background-color: #45a049;
+    }
+
+    @-webkit-keyframes roll {
+      from {
+        -webkit-transform: rotate(0deg)
+      }
+
+      to {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-moz-keyframes roll {
+      from {
+        -moz-transform: rotate(0deg)
+      }
+
+      to {
+        -moz-transform: rotate(360deg)
+      }
+    }
+
+    @keyframes roll {
+      from {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .irgendwos {
+      -moz-animation-name: roll;
+      -moz-animation-duration: 4s;
+      -moz-animation-iteration-count: 1;
+      -webkit-animation-name: roll;
+      -webkit-animation-duration: 4s;
+      -webkit-animation-iteration-count: 1;
+    }
+  </style>
+</head>
+
+<body id="boddyyy">
+  <h1>Upgraded Cookie Clicker</h1>
+  <img class="cookie-image" id="cookie-image" src="https://cookieclickercity.com/upload/imgs/cookie31.png" alt="Cookie">
+  <p class="score">Score: <span id="score">0</span></p>
+
+  <div class="upgrades">
+    <button class="upgrade-button" id="upgrade1" disabled>Upgrade 1 (Cost: 10)</button>
+    <button class="upgrade-button" id="upgrade2" disabled>Upgrade 2 (Cost: 20)</button>
+    <button class="upgrade-button" id="upgrade3" disabled>Upgrade 3 (Cost: 30)</button>
+  </div>
+  <div class="centured">
+    <span>
+      <a href="#" id="btnbtn" alt="Button"></a>
+    </span>
+  </div>
+  <script>
+    let score = 0;
+    let upgrade1Cost = 10;
+    let upgrade2Cost = 20;
+    let upgrade3Cost = 30;
+    let cookiesPerClick = 1;
+    let passiveCookiesPerSecond = 0;
+
+    const cookieImage = document.getElementById('cookie-image');
+    const scoreElement = document.getElementById('score');
+    const upgrade1Button = document.getElementById('upgrade1');
+    const upgrade2Button = document.getElementById('upgrade2');
+    const upgrade3Button = document.getElementById('upgrade3');
+    const button = document.getElementById('btnbtn');
+
+    const onclick = () => {
+      const dom = document.getElementById('boddyyy');
+      dom.classList.add('irgendwos');
+      setTimeout(() => {
+        dom.classList.remove('irgendwos');
+      }, 5000)
+    }
+
+    button.addEventListener('click', onclick);
+
+    const incrementScore = (event) => {
+      score += cookiesPerClick;
+      scoreElement.textContent = score;
+
+      if (score >= upgrade1Cost) {
+        upgrade1Button.disabled = false;
+      }
+
+      if (score >= upgrade2Cost) {
+        upgrade2Button.disabled = false;
+      }
+
+      if (score >= upgrade3Cost) {
+        upgrade3Button.disabled = false;
+      }
+
+      // Create a div element for the cookies per click animation
+      const cookiesPerClickAnimation = document.createElement('div');
+      cookiesPerClickAnimation.className = 'cookies-per-click-animation';
+      cookiesPerClickAnimation.textContent = `+${cookiesPerClick}`;
+      cookiesPerClickAnimation.style.left = `${event.clientX}px`;
+      cookiesPerClickAnimation.style.top = `${event.clientY}px`;
+
+      // Add the animation element to the document
+      document.body.appendChild(cookiesPerClickAnimation);
+
+      // Remove the animation element after a short delay
+      setTimeout(() => {
+        document.body.removeChild(cookiesPerClickAnimation);
+      }, 1000);
+
+      // Add a class to the image to apply the effect
+      cookieImage.classList.add('click-effect');
+
+      // Remove the effect class after a short delay
+      setTimeout(() => {
+        cookieImage.classList.remove('click-effect');
+      }, 200);
+    };
+
+    const upgrade1Action = () => {
+      if (score >= upgrade1Cost) {
+        score -= upgrade1Cost;
+        upgrade1Cost *= 2;
+        scoreElement.textContent = score;
+        upgrade1Button.textContent = `Upgrade 1 (Cost: ${upgrade1Cost})`;
+        cookiesPerClick *= 2;
+      }
+    };
+
+    const upgrade2Action = () => {
+      if (score >= upgrade2Cost) {
+        score -= upgrade2Cost;
+        upgrade2Cost *= 2;
+        scoreElement.textContent = score;
+        upgrade2Button.textContent = `Upgrade 2 (Cost: ${upgrade2Cost})`;
+        passiveCookiesPerSecond += 1;
+        updatePassiveCookies();
+      }
+    };
+
+    const upgrade3Action = () => {
+      if (score >= upgrade3Cost) {
+        score -= upgrade3Cost;
+        upgrade3Cost *= 2;
+        scoreElement.textContent = score;
+        upgrade3Button.textContent = `Upgrade 3 (Cost: ${upgrade3Cost})`;
+        passiveCookiesPerSecond += 5;
+        updatePassiveCookies();
+      }
+    };
+
+    const updatePassiveCookies = () => {
+      const passiveCookiesElement = document.getElementById('passive-cookies');
+      passiveCookiesElement.textContent = `Passive Cookies Per Second: ${passiveCookiesPerSecond}`;
+    };
+
+    cookieImage.addEventListener('click', incrementScore);
+
+    upgrade1Button.addEventListener('click', upgrade1Action);
+
+    upgrade2Button.addEventListener('click', upgrade2Action);
+
+    upgrade3Button.addEventListener('click', upgrade3Action);
+
+    setInterval(() => {
+      score += passiveCookiesPerSecond;
+      scoreElement.textContent = score;
+    }, 1000);
+  </script>
+</body>
+
+</html>
