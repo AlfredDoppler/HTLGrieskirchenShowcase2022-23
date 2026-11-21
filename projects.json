@@ -23,7 +23,7 @@
     "info": "Dodge the professor's shots, once your lives are used up try your luck at solving resistances and keep playing.",
     "status": "1"
   },
-    {
+  {
     "title": "Catan",
     "folder": "Catan",
     "author": "Tobias Schiffelhumer",
@@ -112,14 +112,14 @@
     "status": "-1"
   },
   {
-     "title": "Ballic",
+    "title": "Ballic",
     "folder": "Ballic_webgl",
     "author": "Michel Tischler",
     "year": "2022_WS",
     "info": "Gemoetry dash with endless levels",
     "status": "-1"
   },
-  {     
+  {
     "title": "Enter the Dungeon",
     "folder": "EnterTheDungeon",
     "author": "Emilio Kamer",
@@ -150,7 +150,7 @@
     "year": "2022_WS",
     "info": "Jetpack Joyride fake",
     "status": "-1"
-  }, 
+  },
   {
     "title": "Spedrun",
     "folder": "ChenK",
@@ -167,15 +167,15 @@
     "info": "Spedrun",
     "status": "-1"
   },
-  {  
+  {
     "title": "Second2DGame",
     "folder": "Second2DGame",
     "author": "Tamino Gutjahr",
     "year": "2023_SS",
     "info": "-",
     "status": "-1"
-  },    
-  {  
+  },
+  {
     "title": "3DSchooterMyGame",
     "folder": "3DSchooterMyGame",
     "author": "Benedikt Chrisian",
@@ -183,13 +183,33 @@
     "info": "-",
     "status": "-1"
   },
-  {  
+  {
     "title": "Bricks",
     "folder": "Bricks",
     "author": "Anna Praher",
     "year": "2023_SS",
     "info": "-",
     "status": "1"
+  },
+  {
+    "title": "DoorGame",
+    "folder": "Finished Game",
+    "author": "Raith019",
+    "year": "2022_WS",
+    "status": 1
+  },
+  {
+    "title": "Ruby's Adventure",
+    "folder": "GolubP",
+    "author": "pgolub02",
+    "year": "2022_WS",
+    "status": 1
+  },
+  {
+    "title": "Episode9",
+    "folder": "YilmazK",
+    "author": "kyilma7",
+    "year": "2022_WS",
+    "status": 1
   }
-  
 ]
